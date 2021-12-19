@@ -1,0 +1,29 @@
+GET http://localhost:3000/api/users HTTP/1.1
+
+### 
+POST http://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+
+{
+  "username": "joe"
+}
+
+###
+
+POST http://localhost:3000/api/users/61bea9440095341d7d39e71f/exercises HTTP/1.1
+content-type: application/json
+
+{
+  "description": "test",
+  "date": "1990-01-01",
+  "duration": 60
+}
+
+###
+GET http://localhost:3000/api/users/61bf8e0bb70c41340a7dd12f/logs?from=1989-12-31&to=1990-01-01
+content-type: application/json
+
+
+###
+
+GET http://localhost:3000/api/users/61bf91279bf26908b7e897c0/logs?limit=1
