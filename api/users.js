@@ -63,7 +63,6 @@ router.post("/:userId/exercises", async (req, res, next) => {
 router.get("/:userId/logs", async (req, res, next) => {
   const { userId } = req.params;
   const { from, to, limit } = req.query;
-  console.log(limit);
   const user = await UserModel.findById(userId);
 
   let exercises = await ExerciseModel.find({
